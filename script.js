@@ -23,9 +23,10 @@ var timerEl = $('#timer')
 var timeleft = questions.length*15;
 
 
+
 function renderQuestion(answer){
 questions.question1.answers.Each(function(answer){
-    $('#qBlock').$('<button>').attr('class', 'btn btn-success').text(answer);
+    // $('#qBlock').$('<button>').attr('class', 'btn btn-success').text(answer);
 
 
 })
@@ -44,13 +45,14 @@ function startQuiz(){
         }
         timeleft -= 1;
       }, 1000);
+      questions.forEach(function(question){
+        document.getElementById('questionPrint').textContent([question]);
+     });
+}
     /*var i = 90;
         setInterval(function () {
             $("#countdown").html(i);
             i--;
         }, 1000);*/
-    }
-
-
-
-$('#start-quiz').on('click', startQuiz);
+  
+ $('#start-quiz').on('click', startQuiz);
