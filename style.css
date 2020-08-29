@@ -1,10 +1,77 @@
-.row {
-    margin:auto;
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-h1 {
+
+#highScores {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 px 20px 0 px 0px;
+    /* text-align: center;     */
+}
+
+#timer {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 px 20px 0 px 0px;
+}
+
+#container {
+    border-radius: 10px;
+    background-color: rgb(141, 206, 243);
+    border-width: 5px;
+    border-style: solid;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin: 200px;
+    padding: 30px 0px 50px 0px;
+}
+
+#container button {
+    background-color: rgb(116, 40, 97);
+    color: white;
+    padding: 5px;
+    margin: 0px 10px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#start-button {
+    font-size: 18px;
+    color: white;
+    border: solid;
+    background-color: rgb(116, 40, 97);
+    padding: 5px;
 }
 
 .hide {
-display: none;}
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: rgb(141, 206, 243);
+    }
+
+    #highScores {
+        float: none;
+        width: 100%;
+        padding: 0px;
+    }
+
+    #timer {
+        width: 100%;
+        float: none;
+        padding: 0px;
+    }
+
+    #container {
+        border: none;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin: auto;
+        padding: 10px 0px 10px 0px; 
+    }
+}
